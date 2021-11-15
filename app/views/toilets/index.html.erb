@@ -1,0 +1,7 @@
+<ul>
+<% @toilets.each do |toilet| %>
+  <h2><%= link_to toilet.name, toilet_path(toilet) %></h2>
+<% end %>
+</ul>
+
+<%= link_to "create a toilet", new_toilet_path %>
