@@ -1,15 +1,21 @@
-<h2><%= @toilet.name %></h2>
-<ul>
-  <% if @toilet.photos.attached? %>
-    <% @toilet.photos.each do |photo| %>
-      <li><%= cl_image_tag photo.key, height: 300, width: 200, crop: :fill %></li>
+<div class= "toilet-container">
+  <h2><%= @toilet.name %></h2>
+  <ul class ='toilet'>
+    <% if @toilet.photos.attached? %>
+      <% @toilet.photos.each do |photo| %>
+        <li class ='toilet-img'><div class= "toilet-img" style="background-image: url(<%= cl_image_path photo.key %>)"></div></li>
+      <% end %>
     <% end %>
-  <% end %>
-  <li><%= @toilet.description %></li>
-  <li><%= @toilet.location %></li>
-  <li><%= @toilet.price %></li>
-  <li><%= @toilet.user.email %></li>
-</ul>
-
-<%= link_to "home", root_path %>
-<%= link_to "add a booking for this toilet", new_toilet_booking_path(@toilet) %>
+    <div class="toilet-description">
+      <li><%= @toilet.description %></li>
+      <li><%= @toilet.location %></li>
+      <li><%= @toilet.price %></li>
+      <li><%= @toilet.user.email %></li>
+    </div>
+  </ul>
+  <ul>
+  <li class='btn-grey'><%= link_to "home", root_path %></li>
+  <br>
+  <li class='btn-grey'><%= link_to "add a booking", new_toilet_booking_path(@toilet) %></li >
+  </ul>
+</div>
