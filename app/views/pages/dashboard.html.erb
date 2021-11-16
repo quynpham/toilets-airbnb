@@ -1,0 +1,22 @@
+<h2>Hello <%= @user.email %></h2>
+<h3>Your toilets: </h3>
+<ul>
+  <% @toilets.each do |toilet| %>
+  <li><%= toilet.name %></li>
+  <% end %>
+</ul>
+<%= link_to "Create a toilet", new_toilet_path %>
+
+<h3>Bookings of toilets of other people:</h3>
+<ul>
+  <% @bookings.each do |booking| %>
+  <li><%= booking.message %></li>
+  <% end %>
+</ul>
+
+<h3>Bookings of your toilets:</h3>
+<ul>
+  <% @bookings_of_your_toilets.each do |booking| %>
+  <li><%= booking.message %></li>
+  <% end %>
+</ul>
