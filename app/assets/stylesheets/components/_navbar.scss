@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(255, 48, 48);
+  background-color: rgb(66, 66, 66);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,36 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.fa-toilet-paper:before {
+  color: #3BE4E6;
+  &:hover {
+    color: #3BE4E6;
+  }
+  font-size: 40px;
+  // padding-left: 50px;
+}
+
+.name_logo {
+  justify-content: space-between;
+  color: #3BE4E6;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  padding-top: 3px;
+  padding-right: 1250px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  text-decoration: none;
+  color: #3BE4E6;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.dropdown-item {
+  &:hover {
+    color: #3BE4E6;
+  }
 }
