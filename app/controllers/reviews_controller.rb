@@ -1,6 +1,14 @@
 class ReviewsController < ApplicationController
+  def index
+    @review = Review.all
+  end
+
   def new
     @review = Review.new
+  end
+
+  def show
+    @review = Review.find(params[:id])
   end
 
   def create
@@ -15,4 +23,10 @@ class ReviewsController < ApplicationController
       render :new
     end
   end
+end
+
+private
+
+def review_params
+  params.require(:review).permit(:rating, :comment)
 end

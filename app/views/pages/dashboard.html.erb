@@ -11,6 +11,7 @@
 <ul>
   <% @bookings.each do |booking| %>
   <li><%= booking.message %></li>
+  <%= link_to 'Leave a review', new_review_path(@review) %>
   <% end %>
 </ul>
 
