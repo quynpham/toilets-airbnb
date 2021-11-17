@@ -1,7 +1,21 @@
-<ul>
-<% @toilets.each do |toilet| %>
-  <h2><%= link_to toilet.name, toilet_path(toilet) %></h2>
-<% end %>
-</ul>
 
-<%= link_to "create a toilet", new_toilet_path %>
+
+<div class="banner button">
+  <h1>Easily find the best toilet in town!</h1>
+  <%= link_to "create a toilet", new_toilet_path %>
+</div>
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class="toilet-index-container text-decoration">
+  <h2>Available toilets:</h2>
+  <div class="cards-index">
+    <% @toilets.each do |toilet| %>
+    <div class="card-index">
+      <h4><%= link_to toilet.name, toilet_path(toilet) %></h4>
+      <p>"<%= toilet.description %>"</p>
+    </div>
+    <% end %>
+  </div>
+</div>

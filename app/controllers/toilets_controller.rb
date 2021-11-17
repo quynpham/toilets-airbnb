@@ -1,7 +1,17 @@
 class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+
   def index
     @toilets = Toilet.all
+
+    @markers = @toilets.geocoded.map do |toilet|
+      {
+        lat: toilet.latitude,
+        lng: toilet.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { toilet: toilet }),
+        image_url: helpers.asset_url('poop.gif')
+      }
+    end
   end
 
   def new

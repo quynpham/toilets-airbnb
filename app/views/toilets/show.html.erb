@@ -3,7 +3,7 @@
   <ul class ='toilet'>
     <% if @toilet.photos.attached? %>
       <% @toilet.photos.each do |photo| %>
-        <li class ='toilet-img'><div class= "toilet-img" style="background-image: url(<%= cl_image_path photo.key %>)"></div></li>
+        <li class='toilet-img'><div class="toilet-img" style="background-image: url('<%= cl_image_path photo.key %>')"></div></li>
       <% end %>
     <% end %>
     <div class="toilet-description">
@@ -14,7 +14,6 @@
     </div>
   </ul>
   <ul>
-  <li class='btn-grey'><%= link_to "home", root_path %></li>
   <br>
   <li class='btn-grey'><%= link_to "add a booking", new_toilet_booking_path(@toilet) %></li >
   </ul>
