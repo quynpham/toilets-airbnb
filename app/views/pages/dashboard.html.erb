@@ -7,18 +7,18 @@
 </ul>
 <%= link_to "Create a toilet", new_toilet_path %>
 
-<h3>Bookings of toilets of other people:</h3>
-<% @bookings.each_with_index do |booking, index| %>
-  <h4> <%= index + 1 %>. <%= booking.toilet.name  %></h4>
-  <p>booked from: <%= booking.date_start %></p>
-  <p>until: <%= booking.date_end %></p>
-  <p>"<%= booking.message %>"</p>
-<% end %>
-
 <h3>Bookings of your toilets:</h3>
 <% @bookings_of_your_toilets.each_with_index do |booking, index| %>
 <h4><%= index + 1 %>. <%= booking.toilet.name %></h4>
   <p>booked from:<%= booking.date_start %></p>
   <p>until <%= booking.date_end %></p>
-  <p>"<%= booking.message %>"</p>
+  <p>"<%= booking.message %>" <%= link_to "decline booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %></p>
+<% end %>
+
+<h3>Your bookings:</h3>
+<% @bookings.each_with_index do |booking, index| %>
+  <h4> <%= index + 1 %>. <%= booking.toilet.name  %></h4>
+  <p>booked from: <%= booking.date_start %></p>
+  <p>until: <%= booking.date_end %></p>
+  <p>"<%= booking.message %>" <%= link_to "cancel booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %></p>
 <% end %>
