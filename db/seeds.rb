@@ -12,8 +12,8 @@ User.destroy_all
 
 puts "Creating toilets..."
 user1 = User.create!({ email: "Quynh-Anh@lewagon.be", password: "toiletsairbnb"})
-toilet1 = { name: "My Toilet", description: "very nice toilet!", location: "my house", price: 7.5, user: user1 }
-toilet2 = { name: "Your toilet", description: "also nice!", location: "56A Shoreditch High St, London E1 6PQ", price: 4, user: user1 }
+toilet1 = { name: "My Toilet", description: "very nice toilet!", location: "10 Cantersteen, 1000 bruxelles", price: 7.5, user: user1 }
+toilet2 = { name: "Your toilet", description: "also nice!", location: "place royale, brussels, belgium", price: 4, user: user1 }
 
 [ toilet1, toilet2 ].each do |attributes|
   toilet = Toilet.create!(attributes)
