@@ -1,32 +1,24 @@
 class ReviewsController < ApplicationController
-  def index
-    @review = Review.all
-  end
-
   def new
+    @booking = Booking.find(params[:booking_id])
     @review = Review.new
   end
 
-  def show
-    @review = Review.find(params[:id])
-  end
-
   def create
-    @booking = Booking.find(params[:booking_id])
     @review = Review.new(review_params)
-    @review.Booking = @booking
-    @review.user_id = current_user.id
-
+    @booking = Booking.find(params[:booking_id])
+    @toilet = @booking.toilet
+    @review.booking = @booking
     if @review.save
       redirect_to toilet_path(@toilet)
     else
       render :new
     end
   end
-end
 
-private
+  private
 
-def review_params
-  params.require(:review).permit(:rating, :comment)
+  def review_params
+    params.require(:review).permit(:rating, :comment)
+  end
 end
