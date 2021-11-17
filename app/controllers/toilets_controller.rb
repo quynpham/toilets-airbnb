@@ -20,6 +20,7 @@ class ToiletsController < ApplicationController
 
   def show
     @toilet = Toilet.find(params[:id])
+    @bookings = @toilet.bookings
   end
 
   def create

@@ -1,4 +1,5 @@
 class Booking < ApplicationRecord
+  has_one :review, dependent: :destroy
   belongs_to :toilet
   belongs_to :user
 
