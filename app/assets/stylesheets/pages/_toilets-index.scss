@@ -1,0 +1,15 @@
+.toilet-index-container {
+  h2 {
+  color: rgb(66,66,66);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    font-size: larger;
+    &:hover {
+      color: black;
+      opacity: 1;
+    }
+  }
+}
