@@ -2,22 +2,24 @@
 <h3>Your toilets: </h3>
 <ul>
   <% @toilets.each do |toilet| %>
-  <li><%= toilet.name %></li>
+  <li><%= link_to toilet.name, toilet_path(toilet) %></li>
   <% end %>
 </ul>
 <%= link_to "Create a toilet", new_toilet_path %>
 
-<h3>Bookings of toilets of other people:</h3>
-<ul>
-  <% @bookings.each do |booking| %>
-  <li><%= booking.message %></li>
-  <%= link_to 'Leave a review', new_review_path(@review) %>
-  <% end %>
-</ul>
-
 <h3>Bookings of your toilets:</h3>
-<ul>
-  <% @bookings_of_your_toilets.each do |booking| %>
-  <li><%= booking.message %></li>
-  <% end %>
-</ul>
+<% @bookings_of_your_toilets.each_with_index do |booking, index| %>
+<h4><%= index + 1 %>. <%= booking.toilet.name %></h4>
+  <p>booked from:<%= booking.date_start %></p>
+  <p>until <%= booking.date_end %></p>
+  <p>"<%= booking.message %>" <%= link_to "decline booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %></p>
+<% end %>
+
+<h3>Your bookings:</h3>
+<% @bookings.each_with_index do |booking, index| %>
+  <h4> <%= index + 1 %>. <%= booking.toilet.name  %></h4>
+  <p>booked from: <%= booking.date_start %></p>
+  <p>until: <%= booking.date_end %></p>
+  <p>"<%= booking.message %>" <%= link_to "cancel booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %></p>
+  <%= link_to 'Leave a review', new_review_path(@review) %>
+<% end %>
