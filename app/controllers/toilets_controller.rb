@@ -25,6 +25,6 @@ end
 private
 
 def toilet_params
-  params.require(:toilet).permit(:name, :description, :location, :price)
+  params.require(:toilet).permit(:name, :description, :location, :price, photos: [])
 end
 end

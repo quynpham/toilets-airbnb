@@ -1,5 +1,6 @@
 <%= simple_form_for(@toilet) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true} %>
   <%= f.input :description %>
   <%= f.input :location %>
   <%= f.input :price %>
