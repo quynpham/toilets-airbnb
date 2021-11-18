@@ -34,3 +34,10 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
 });
+
+import { initUpdateNavbarOnScroll } from "../components/navbar";
+
+document.addEventListener("turbolinks:load", () => {
+  // Call your JS functions here
+  initUpdateNavbarOnScroll();
+});
