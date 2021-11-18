@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'toilets#index'
-  get '/dashboard', to:'pages#dashboard', as: :dashboard
-  resources :toilets, only: [:new, :show, :create] do
+  root to: 'pages#home'
+  get '/dashboard', to: 'pages#dashboard', as: :dashboard
+  resources :toilets, only: [:index, :new, :show, :create] do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:destroy] do
