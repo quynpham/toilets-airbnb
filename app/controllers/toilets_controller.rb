@@ -40,6 +40,13 @@ class ToiletsController < ApplicationController
     end
   end
 
+  def destroy
+    @toilet = Toilet.find(params[:id])
+    @toilet.destroy
+
+    redirect_to dashboard_path
+  end
+
   private
 
   def toilet_params

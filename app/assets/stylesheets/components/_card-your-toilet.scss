@@ -1,0 +1,31 @@
+.card-your-toilet {
+  background-color: white;
+  // padding: 20px;
+  margin: 20px;
+  // display:flex;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px 5px lightgray;
+  // width: 100%;
+}
+
+.content {
+  padding: 20px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-end;
+  // justify-content: flex-end;
+}
+
+.cards-your-toilet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.paige-container {
+  background-color: rgb(232,232,228);
+}
+
+.image {
+  // width: 50%;
+  // height: 50%;
+}
