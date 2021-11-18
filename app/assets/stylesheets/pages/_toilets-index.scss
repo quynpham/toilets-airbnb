@@ -14,8 +14,9 @@
 .searchblock {
   height: 100px;
   width: 100%;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .toilet-index-container {
@@ -51,9 +52,9 @@
   background-size: cover;
   background-position: center;
   height: 200px;
-  width: 200px;
-  margin: 10px;
-  border-radius: 5px;
+  width: 100%;
+  // margin: 0px;
+  // border-radius: 0px;
   text-align: center;
   padding: 20px;
 }
@@ -64,9 +65,7 @@
 }
 
 .magnifier {
-  margin-top: 4px;
   margin-left: -35px;
-  margin-right: 700px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
