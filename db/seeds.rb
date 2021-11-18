@@ -17,18 +17,18 @@ user1 = User.create!({ email: "Quynh-Anh@lewagon.be", password: "toiletsairbnb"}
 user2 = User.create!({ email: "kato@lewagon.be", password: "toiletsairbnb" })
 user3 = User.create!({ email: "dorian@lewagon.be", password: "toiletsairbnb"})
 users = [user1, user2, user3]
-photo1 = 'https://images.pexels.com/photos/7045923/pexels-photo-7045923.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
-photo2 = 'https://images.pexels.com/photos/7040699/pexels-photo-7040699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-photo3 = 'https://images.pexels.com/photos/6957082/pexels-photo-6957082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-photo4 = 'https://images.pexels.com/photos/5860600/pexels-photo-5860600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+photo1 = 'https://images.pexels.com/photos/6444256/pexels-photo-6444256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=325&w=470'
+photo2 = 'https://images.pexels.com/photos/6934233/pexels-photo-6934233.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=325&w=470'
+photo3 = 'https://images.pexels.com/photos/6957082/pexels-photo-6957082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=325&w=470'
+photo4 = 'https://images.pexels.com/photos/7045362/pexels-photo-7045362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=325&w=470'
 
 image_urls = [photo1, photo2, photo3, photo4]
 i = 0
-100.times do
+67.times do
   i += 1
   toilet = Toilet.create(
-    name: "#{Faker::Ancient.unique.god}'s toilet",
-    description: Faker::Quote.famous_last_words,
+    name: "#{Faker::Superhero.unique.name}'s toilet",
+    description: Faker::Food.description,
     location: Faker::Address.city,
     price: rand(0..75),
     user: users.sample
