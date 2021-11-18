@@ -27,7 +27,7 @@ i = 0
 100.times do
   i += 1
   toilet = Toilet.create(
-    name: Faker::Ancient.god,
+    name: "#{Faker::Ancient.unique.god}'s toilet",
     description: Faker::Quote.famous_last_words,
     location: Faker::Address.city,
     price: rand(0..75),

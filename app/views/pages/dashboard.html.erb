@@ -5,8 +5,9 @@
 <div class="button">
   <% @toilets.each do |toilet| %>
   <p><%= link_to toilet.name, toilet_path(toilet) %></p>
-  <p><%= link_to "Create a toilet", new_toilet_path %></p>
+  <p><%= link_to "Delete", toilet_path(toilet), method: :delete, data: {confirm: "Are you sure?"} %></p>
   <% end %>
+  <p><%= link_to "Create a toilet", new_toilet_path %></p>
 </div>
 
 
