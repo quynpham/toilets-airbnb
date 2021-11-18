@@ -1,3 +1,7 @@
+// .index-page {
+//   display: flex;
+// }
+
 .toilet-index-container {
   h2 {
     color: rgb(66,66,66);
@@ -16,16 +20,8 @@
 
 .searchblock {
   justify-content: flex-start;
-  // text-align: center;
   display: flex;
 }
-
-// .searchbar {
-//   // padding: 40px;
-//   // width: 40%;
-//   // display: flex;
-//   // box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
-// }
 
 .form-control {
   border-radius: 20px;
@@ -50,8 +46,3 @@
   font-size: 12px;
   color: #3BE4E6
 }
-
-// .map {
-//   justify-content: right;
-//   position: sticky;
-// }
