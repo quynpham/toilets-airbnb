@@ -11,23 +11,37 @@
   width: 40px;
 }
 
-.fa-toilet-paper:before {
-  color: #3BE4E6;
-  &:hover {
-    color: #3BE4E6;
-  }
-  font-size: 40px;
-  // padding-left: 50px;
+.navbar a:hover {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.name_logo {
+.fa-toilet-paper {
+  color: #3BE4E6;
+  &:hover {
+    color: #ffffff;
+  }
+  font-size: 40px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.name-logo {
   justify-content: space-between;
   color: #3BE4E6;
   font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
   padding-top: 3px;
-  padding-right: 1250px;
+    &:hover {
+    color: #ffffff;
+  }
 }
+
 
 .navbar-light .navbar-nav .nav-link {
   text-decoration: none;
