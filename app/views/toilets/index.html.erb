@@ -1,13 +1,21 @@
-<%= form_tag toilets_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a toilet"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<div class="searchblock">
+  <div class="searchbar">
+    <%= form_tag toilets_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a toilet"
+      %>
+      <div class="magnifier">
+        <i class="fas fa-search">
+        <%= submit_tag "Submit" %>
+        </i>
+      </div>
+    <% end %>
+  </div>
+</div>
 <div id="map"
-     style="width: 100%; height: 600px;"
+     style="width: 40%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 <div class="toilet-index-container text-decoration">
