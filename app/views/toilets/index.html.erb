@@ -6,11 +6,11 @@
         class: "form-control",
         placeholder: "Find a toilet"
       %>
-      <div class="magnifier">
-        <i class="fas fa-search">
-        <%= submit_tag "Submit" %>
-        </i>
-      </div>
+      <%# <div class="magnifier"> %>
+        <%= button_tag "Submit", type: "submit", class: "magnifier" do %>
+        <i class="fas fa-search"></i>
+        <% end %>
+      <%# </div> %>
     <% end %>
   </div>
 </div>
