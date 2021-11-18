@@ -1,6 +1,22 @@
-// .index-page {
-//   display: flex;
-// }
+.index-page {
+  display: flex;
+}
+
+.search-results {
+  width: 60%;
+}
+
+#map {
+  position: sticky;
+  top: 0;
+}
+
+.searchblock {
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
 
 .toilet-index-container {
   h2 {
@@ -18,9 +34,28 @@
   }
 }
 
-.searchblock {
-  justify-content: flex-start;
-  display: flex;
+// .searchbar {
+
+// }
+
+// .submit-button {
+
+// }
+
+// .cards-index {
+
+// }
+
+.card-index {
+  background-image: asset-url('toilet-index-card.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
 }
 
 .form-control {
