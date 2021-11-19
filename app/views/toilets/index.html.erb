@@ -10,24 +10,41 @@
           %>
         <% end %>
       </div>
-      <div class="submit-button">
-        <%= button_tag "Submit", type: "submit", class: "magnifier" do %>
-          <i class="fas fa-search"></i>
-        <% end %>
+      <div class="fixbutton">
+        <div class="submit-button">
+          <%= button_tag "Submit", type: "submit", class: "magnifier" do %>
+            <div class="loupe">
+              <i class="fas fa-search"></i>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
+    <br>
+    <br>
     <h2>Toilets in the area</h2>
-    <br>
-    <br>
     <div class="toilet-index-container text-decoration">
       <div class="cards-index">
         <% @toilets.each do |toilet| %>
+          <hr class="line">
           <div class="card-index">
-            <h4><%= link_to toilet.name, toilet_path(toilet) %></h4>
-            <p>"<%= toilet.description %>"</p>
+            <div class="picture">
+            </div>
+            <div class="card-info">
+              <div class="titleandlocation">
+                <h3 class="card-title"><%= link_to toilet.name, toilet_path(toilet) %></h3>
+                <h4 class="card-location"><%= toilet.location %></h4>
+              </div>
+              <%# <hr class="inside-line"> %>
+              <p class="text">"<%= toilet.description %>"</p>
+            </div>
           </div>
         <% end %>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
   </div>
   <div id="map"
