@@ -24,31 +24,16 @@
   color: #ffffff;
 }
 
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-    &:hover {
-    color: #ffffff;
-  }
-}
 .logo-link i {
   color: #3BE4E6;
-  font-size: 40px;
-}
-
-.name-logo {
-  justify-content: space-between;
-  color: #3BE4E6;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
-  padding-top: 3px;
-    &:hover {
-    color: #ffffff;
-  }
 }
 
+.logo-link span {
+  color: #3BE4E6;
+  font-family: "Ubuntu", "sans serif";
+  font-size: 30px;
+}
 
 .navbar-light .navbar-nav .nav-link {
   text-decoration: none;
