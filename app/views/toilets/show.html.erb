@@ -3,7 +3,7 @@
   <ul class ='toilet'>
     <% if @toilet.photos.attached? %>
       <% @toilet.photos.each do |photo| %>
-        <li><div class='toilet-img' style="background-image: url('<%= cl_image_path photo.key %>')"></div></li>
+        <li><div class='toilet-img' style="background-image: url('<%= cl_image_path photo.key %>', crop: :fit)"></div></li>
       <% end %>
     <% end %>
     <div class="toilet-description">
