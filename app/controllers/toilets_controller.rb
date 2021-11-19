@@ -28,12 +28,6 @@ class ToiletsController < ApplicationController
   def show
     @toilet = Toilet.find(params[:id])
     @bookings = @toilet.bookings
-    @reviews = []
-    @bookings.each do |booking|
-      if booking.review
-        @reviews << booking.review
-      end
-    end
   end
 
   def create
