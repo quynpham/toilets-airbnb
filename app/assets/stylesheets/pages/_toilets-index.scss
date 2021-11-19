@@ -71,8 +71,9 @@
 }
 
 .titleandlocation {
-  width: 300px;
+  width: 590px;
   display: flex;
+  justify-content: space-between;
 }
 
 .line {
@@ -86,7 +87,9 @@
 }
 
 .card-location {
-  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(66, 66, 66)
 }
 
 // p {
@@ -99,6 +102,10 @@
 
 .card-info {
   padding-left: 20px;
+}
+
+.text {
+  width: 400px;
 }
 
 .form-control {
