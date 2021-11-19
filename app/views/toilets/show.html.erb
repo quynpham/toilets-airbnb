@@ -8,7 +8,7 @@
     <% end %>
     <div class="toilet-description">
       <li><%= @toilet.description %></li>
-      <li><%= @toilet.location %></li>
+      <li><i class="fas fa-map-marker-alt"></i><%= @toilet.location %></li>
       <li><%= @toilet.price %></li>
       <li><%= @toilet.user.email %></li>
     </div>
@@ -17,11 +17,11 @@
   <br>
   <li class='btn-grey'><%= link_to "add a booking", new_toilet_booking_path(@toilet) %></li >
   </ul>
-  <h3>Reviews</h3>
   <ul class="list-group">
     <% if @bookings %>
       <% @bookings.each do |booking| %>
         <% if booking.review %>
+        <h2>Reviews</h2>
           <li class="list-group-item"><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
         <% end %>
       <% end %>
