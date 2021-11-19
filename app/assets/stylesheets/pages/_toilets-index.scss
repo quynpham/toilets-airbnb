@@ -12,7 +12,7 @@
 }
 
 .searchblock {
-  height: 150px;
+  height: 120px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,27 +49,51 @@
 // }
 
 // .cards-index {
+// }
 
-  // }
+.card-index {
+  display: flex;
+  height: 170px;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 5px;
+}
 
-  .card-index {
-    background-image: asset-url('toilet-index-card.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    width: 100%;
-    // margin: 0px;
-    // border-radius: 0px;
-    text-align: center;
-    padding: 20px;
-  }
+.picture {
+  text-align: center;
+  background-image: asset-url('toilet-index-card.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  width: 260px;
+  border-radius: 10px;
+  border: 1px solid rgb(201, 201, 201);
+}
 
-  .form-control {
-    border-radius: 20px;
-    background-color: rgb(236, 236, 236);
-  }
+.line {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-  .magnifier {
+.card-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.inside-line {
+  width: 20px;
+}
+
+.card-info {
+  padding-left: 20px;
+}
+
+.form-control {
+  border-radius: 20px;
+  background-color: rgb(236, 236, 236);
+}
+
+.magnifier {
   display: flex;
   justify-content: center;
   align-items: center;
