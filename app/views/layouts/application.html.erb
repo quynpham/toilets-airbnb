@@ -16,7 +16,8 @@
 
   <body>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+
+    <div class="content-push"><%= yield %></div>
     <%= render 'shared/flashes' %>
   </body>
 </html>

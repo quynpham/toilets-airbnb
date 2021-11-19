@@ -1,6 +1,10 @@
+.content-push{
+  margin-top: 70px;
+}
 .navbar-lewagon {
   justify-content: space-between;
   background-color: rgb(66, 66, 66);
+  height: 70px;
 }
 
 .navbar-lewagon-transparent {
@@ -20,19 +24,18 @@
   color: #ffffff;
 }
 
-.fa-toilet-paper {
-  color: #3BE4E6;
-  &:hover {
-    color: #ffffff;
-  }
-  font-size: 40px;
-}
 
 .logo-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+    &:hover {
+    color: #ffffff;
+  }
+}
+.logo-link i {
+  color: #3BE4E6;
+  font-size: 40px;
 }
 
 .name-logo {
