@@ -7,22 +7,20 @@
       <% end %>
     <% end %>
     <div class="toilet-description">
-      <li><%= @toilet.description %></li>
-      <li><i class="fas fa-map-marker-alt"></i><%= @toilet.location %></li>
-      <li><%= @toilet.price %></li>
-      <li><%= @toilet.user.email %></li>
+      <li><i class="fas fa-arrow-right"></i><%= @toilet.description %></li>
+      <li><i class="fas fa-map-marker"></i><%= @toilet.location %></li>
+      <li><i class="fas fa-euro-sign"></i><%= @toilet.price %> euros</li>
+      <li><i class="fas fa-paper-plane"></i><%= @toilet.user.email %></li>
     </div>
+      <br>
+    <li class='btn-grey'><%= link_to "add a booking", new_toilet_booking_path(@toilet) %></li >
   </ul>
   <ul>
-  <br>
-  <li class='btn-grey'><%= link_to "add a booking", new_toilet_booking_path(@toilet) %></li >
-  </ul>
-  <ul class="list-group">
-    <% if @bookings %>
+    <% if !@reviews.empty? %>
+      <h3>Reviews</h3>
       <% @bookings.each do |booking| %>
         <% if booking.review %>
-        <h2>Reviews</h2>
-          <li class="list-group-item"><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
+          <li><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
         <% end %>
       <% end %>
     <% end %>
