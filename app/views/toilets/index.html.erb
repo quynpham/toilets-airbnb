@@ -31,8 +31,11 @@
             <div class="picture">
             </div>
             <div class="card-info">
-              <h4 class="card-title"><%= link_to toilet.name, toilet_path(toilet) %></h4>
-              <hr class="inside-line">
+              <div class="titleandlocation">
+                <h4 class="card-title"><%= link_to toilet.name, toilet_path(toilet) %></h4>
+                <h3 class="card-location"><%= toilet.location %></h3>
+              </div>
+              <%# <hr class="inside-line"> %>
               <p>"<%= toilet.description %>"</p>
             </div>
           </div>
