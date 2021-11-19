@@ -2,7 +2,7 @@
   <h2 class="text-center">Welcome <%= @user.email %>!</h2>
   <p class="button p-4"><%= link_to "Share my toilet", new_toilet_path %></p>
   <h3 class="p-4">Your toilets: </h3>
-  <div class="button cards-your-toilet">
+  <div class="cards-your-toilet">
     <% @toilets.each do |toilet| %>
     <div class="card-your-toilet">
       <div class="image">
@@ -13,10 +13,10 @@
         <% end %>
       </div>
       <div class="content">
-        <h4><%= toilet.name %></h4>
+        <h4><%= link_to toilet.name, toilet_path(toilet) %></h4>
         <p><%= toilet.description %></p>
       </div>
-      <div class="delete">
+      <div class="button delete">
         <p><%= link_to "Delete", toilet_path(toilet), method: :delete, data: {confirm: "Are you sure?"} %></p>
       </div>
     </div>
@@ -25,8 +25,8 @@
 
 
   <h3 class="p-4">Bookings of your toilets:</h3>
-  <div class="button cards-your-toilet">
-    <% @bookings_of_your_toilets.each_with_index do |booking, index| %>
+  <div class="cards-your-toilet">
+    <% @bookings_of_your_toilets.each do |booking| %>
     <div class="card-your-toilet">
       <div class="image">
         <% if booking.toilet.photos.attached? %>
@@ -36,12 +36,12 @@
         <% end %>
       </div>
       <div class="content">
-        <h4><%= index + 1 %>. <%= booking.toilet.name %></h4>
+        <h4><%= link_to booking.toilet.name, toilet_path(booking.toilet) %></h4>
         <p>from: <em><%= booking.date_start %></em></p>
         <p>until: <em><%= booking.date_end %></em></p>
         <p>"<%= booking.message %>" </p>
       </div>
-      <div class="delete">
+      <div class="button delete">
         <%= link_to "decline booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %>
       </div>
     </div>
@@ -49,7 +49,7 @@
   </div>
 
   <h3 class="p-4">Your bookings:</h3>
-  <div class="button cards-your-toilet">
+  <div class="cards-your-toilet">
     <% @bookings.each_with_index do |booking, index| %>
     <div class="card-your-toilet">
       <div class="image">
@@ -60,12 +60,12 @@
         <% end %>
       </div>
       <div class="content">
-        <h4> <%= index + 1 %>. <%= booking.toilet.name  %></h4>
+        <h4><%= link_to booking.toilet.name, toilet_path(booking.toilet)  %></h4>
         <p>from: <em><%= booking.date_start %></em></p>
         <p>until: <em><%= booking.date_end %></em></p>
         <p>"<%= booking.message %>"</p>
       </div>
-      <div class="delete">
+      <div class="button delete">
         <%= link_to "cancel booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure?"} %>
         <%= link_to 'Leave a review', new_booking_review_path(booking) %>
       </div>
