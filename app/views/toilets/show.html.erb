@@ -19,11 +19,12 @@
   </ul>
   <h3>Reviews</h3>
   <ul class="list-group">
-  <% if @bookings %>
-    <% @bookings.each do |booking| %>
-    <li class="list-group-item"><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
+    <% if @bookings %>
+      <% @bookings.each do |booking| %>
+        <% if booking.review %>
+          <li class="list-group-item"><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
+        <% end %>
+      <% end %>
     <% end %>
-  <% end %>
-
-</ul>
+  </ul>
 </div>
