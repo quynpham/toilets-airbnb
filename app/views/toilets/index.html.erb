@@ -29,6 +29,11 @@
           <hr class="line">
           <div class="card-index">
             <div class="picture">
+              <% if toilet.photos.attached? %>
+                <% toilet.photos.each do |photo| %>
+                  <div class="toilet-img" id="toilet-index" style="background-image: url('<%= cl_image_path photo.key %>')"></div>
+                <% end %>
+              <% end %>
             </div>
             <div class="card-info">
               <div class="titleandlocation">
