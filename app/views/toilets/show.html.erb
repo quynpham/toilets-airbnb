@@ -16,10 +16,12 @@
     <li class='btn-grey'><%= link_to "add a booking", new_toilet_booking_path(@toilet) %></li >
   </ul>
   <ul>
-      <% if @bookings %>
-        <h3>Reviews</h3>
-        <% @bookings.each do |booking| %>
-        <li><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
+    <% if !@reviews.empty? %>
+      <h3>Reviews</h3>
+      <% @bookings.each do |booking| %>
+        <% if booking.review %>
+          <li><%= booking.review.comment %> Rating:<%= booking.review.rating %>/10</li>
+        <% end %>
       <% end %>
     <% end %>
   </ul>
