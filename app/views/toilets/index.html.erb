@@ -10,10 +10,14 @@
           %>
         <% end %>
       </div>
-      <div class="submit-button">
-        <%= button_tag "Submit", type: "submit", class: "magnifier" do %>
-          <i class="fas fa-search"></i>
-        <% end %>
+      <div class="fixbutton">
+        <div class="submit-button">
+          <%= button_tag "Submit", type: "submit", class: "magnifier" do %>
+            <div class="loupe">
+              <i class="fas fa-search"></i>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <h2>Toilets in the area</h2>

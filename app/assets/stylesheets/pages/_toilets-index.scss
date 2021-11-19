@@ -12,11 +12,11 @@
 }
 
 .searchblock {
-  height: 100px;
+  height: 150px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .toilet-index-container {
@@ -35,36 +35,45 @@
   }
 }
 
-// .searchbar {
+.searchbar {
+  width: 400px;
+  box-shadow: 1px 1px 5px 5px rgb(224, 224, 224);
+  border-radius: 20px;
+}
 
-// }
+.fixbutton {
+  margin-bottom: 4px;
+}
 
 // .submit-button {
-
 // }
 
 // .cards-index {
 
-// }
+  // }
 
-.card-index {
-  background-image: asset-url('toilet-index-card.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 100%;
-  // margin: 0px;
-  // border-radius: 0px;
-  text-align: center;
-  padding: 20px;
-}
+  .card-index {
+    background-image: asset-url('toilet-index-card.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    // margin: 0px;
+    // border-radius: 0px;
+    text-align: center;
+    padding: 20px;
+  }
 
-.form-control {
-  border-radius: 20px;
-  background-color: rgb(236, 236, 236);
-}
+  .form-control {
+    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+  }
 
-.magnifier {
+  .magnifier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 8px;
   margin-left: -35px;
   border-radius: 50%;
   width: 30px;
@@ -74,6 +83,14 @@
   &:hover {
     opacity: 100%;
   }
+}
+
+.loupe {
+  // height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: -20px;
 }
 
 .fas {
